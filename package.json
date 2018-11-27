@@ -1,6 +1,9 @@
 {
   "name": "bs-clearingnummer",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "description": "Clearing numbers for Swedish banks",
+  "author": "Rickard Laurin <rickard.laurin@gmail.com> (http://rickardlaurin.se/)",
+  "license": "MIT",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -8,10 +11,23 @@
     "test": "jest --watch"
   },
   "keywords": [
+    "Clearing",
+    "Number",
+    "Swedish",
+    "Banks",
+    "Bank",
+    "Clearingnummer",
+    "Svensk bank",
     "BuckleScript"
   ],
-  "author": "",
-  "license": "MIT",
+  "homepage": "https://github.com/believer/bs-clearingnummer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/believer/bs-clearingnummer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/believer/bs-clearingnummer/issues"
+  },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.5",
     "bs-platform": "^4.0.7"
