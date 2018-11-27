@@ -1,6 +1,6 @@
 {
   "name": "bs-clearingnummer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Clearing numbers for Swedish banks",
   "author": "Rickard Laurin <rickard.laurin@gmail.com> (http://rickardlaurin.se/)",
   "license": "MIT",
