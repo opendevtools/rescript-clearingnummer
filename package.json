@@ -8,7 +8,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "jest",
+    "test": "npm run build && jest",
     "test:dev": "jest --watch"
   },
   "keywords": [
