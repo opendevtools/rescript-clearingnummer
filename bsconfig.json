@@ -2,10 +2,7 @@
   "name": "bs-clearingnummer",
   "version": "0.1.0",
   "sources": [
-    {
-      "dir": "src",
-      "subdirs": true
-    },
+    "src",
     {
       "dir": "__tests__",
       "type": "dev"
@@ -20,6 +17,5 @@
   "warnings": {
     "error": "+101"
   },
-  "namespace": true,
   "refmt": 3
 }
