@@ -4,14 +4,13 @@ Sort codes, _clearingnummer_ in Swedish, are four or five digit identifiers for 
 
 This is a semi-port of my JavaScript library [Clearingnummer](https://github.com/believer/clearingnummer) written completely in Reason.
 
-## Get started
+## Installation
 
 ```bash
-$ git clone https://github.com/believer/bs-clearingnummer
-$ cd bs-clearingnummer
-$ npm install
-$ npm start
+npm install bs-clearingnummer
 ```
+
+Add `bs-clearingnummer` to `bs-dependencies` in `bsconfig.json`
 
 ## Functions
 
