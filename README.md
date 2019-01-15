@@ -33,7 +33,7 @@ let bankName = Clearingnummer.bankNameByString("8060-6")
 ### allBanks
 
 ```ocaml
-let banks = Clearingnummer.allbanks("8060-6")
+let banks = Clearingnummer.allBanks
 (* banks = ["Amfa Bank", "Avanza Bank", ...] *)
 ```
 
