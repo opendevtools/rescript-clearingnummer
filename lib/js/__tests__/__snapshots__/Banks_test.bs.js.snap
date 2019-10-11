@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#allBanks list all banks 1`] = `
+exports[`#all list all banks 1`] = `
 Array [
   "Amfa Bank",
   "Avanza Bank",

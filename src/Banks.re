@@ -60,8 +60,8 @@ type banks =
   | VP
   | Unknown;
 
-let getBankName = bank =>
-  switch (bank) {
+let getBankName =
+  fun
   | Alandsbanken => {j|Ålandsbanken|j}
   | Amfa => "Amfa Bank"
   | Avanza => "Avanza Bank"
@@ -121,5 +121,68 @@ let getBankName = bank =>
   | TellerSweden => "Teller Branch Sweden"
   | Volvo => "Volvofinans Bank"
   | VP => "VP Securities A/S"
-  | Unknown => ""
-  };
+  | Unknown => "";
+
+let all =
+  [|
+    Amfa,
+    Avanza,
+    BankernasAutomatbolag,
+    BankOfChina,
+    Bluestep,
+    Calyon,
+    Citibank,
+    Danske,
+    DNB,
+    Ekobanken,
+    ErikPenser,
+    Exchange,
+    Folkia,
+    Forex,
+    Fortis,
+    GE,
+    Handelsbanken,
+    ICA,
+    IKANO,
+    JAK,
+    Kommuninvest,
+    Kortaccept,
+    Landshypotek,
+    LSB,
+    Lansforsakringar,
+    Marginalen,
+    MedMera,
+    Nasdaq,
+    Netfonds,
+    Nordax,
+    Nordea,
+    Nordnet,
+    Pareto,
+    Privatgirot,
+    RBS,
+    Resurs,
+    Riksbanken,
+    Riksgalden,
+    SBAB,
+    SEB,
+    Skandia,
+    Sparbanken,
+    SWED,
+    SWEDFryksdalen,
+    SWEDGotland,
+    SWEDKindra,
+    SWEDLekeberg,
+    SWEDMarkaryd,
+    SWEDMonsteras,
+    SWEDNars,
+    SWEDSkaraborg,
+    SWEDSkurup,
+    SWEDSolvesborg,
+    SWEDVarberg,
+    TellerNorway,
+    TellerSweden,
+    Volvo,
+    VP,
+    Alandsbanken,
+  |]
+  ->Belt.Array.map(item => getBankName(item));
