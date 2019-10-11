@@ -1,12 +1,11 @@
 open Jest;
+open Expect;
 open Clearingnummer;
 
 let intTest = (bankName, bank) =>
-  Expect.expect(bankNameByInteger(bank)) |> Expect.toEqual(bankName);
+  expect(bankNameByInteger(bank)) |> toEqual(bankName);
 
 describe("#bankName", () => {
-  open Expect;
-
   describe("Amfa Bank", () =>
     testAll("9660-9669", [9660, 9662, 9669], intTest("Amfa Bank"))
   );
@@ -124,12 +123,16 @@ describe("#bankName", () => {
     testAll("9390-9399", [9390, 9391, 9399], intTest("Landshypotek"))
   );
 
-  describe("Lån & Spar Bank", () =>
-    testAll("9630-9639", [9630, 9638, 9639], intTest("Lån & Spar Bank"))
+  describe({j|Lån & Spar Bank|j}, () =>
+    testAll(
+      "9630-9639",
+      [9630, 9638, 9639],
+      intTest({j|Lån & Spar Bank|j}),
+    )
   );
 
-  describe("Länsförsäkringar Bank", () => {
-    let lans = intTest("Länsförsäkringar Bank");
+  describe({j|Länsförsäkringar Bank|j}, () => {
+    let lans = intTest({j|Länsförsäkringar Bank|j});
 
     testAll("3400-3409", [3400, 3403, 3409], lans);
     testAll("9020-9029", [9020, 9025, 9029], lans);
@@ -171,8 +174,8 @@ describe("#bankName", () => {
     testAll("9100-9109", [9100, 9108, 9109], intTest("Nordnet Bank"))
   );
 
-  describe("Pareto Öhman", () =>
-    testAll("9380-9389", [9380, 9385, 9389], intTest("Pareto Öhman"))
+  describe({j|Pareto Öhman|j}, () =>
+    testAll("9380-9389", [9380, 9385, 9389], intTest({j|Pareto Öhman|j}))
   );
 
   describe("Privatgirot", () =>
@@ -187,8 +190,8 @@ describe("#bankName", () => {
     testAll("9280-9289", [9280, 9282, 9289], intTest("Resurs Bank"))
   );
 
-  describe("Riksgälden", () =>
-    testAll("9880-9899", [9880, 9888, 9899], intTest("Riksgälden"))
+  describe({j|Riksgälden|j}, () =>
+    testAll("9880-9899", [9880, 9888, 9899], intTest({j|Riksgälden|j}))
   );
 
   describe("SBAB Bank", () =>
@@ -256,8 +259,8 @@ describe("#bankName", () => {
       expect(bankNameByString("8217-2")) |> toEqual("Markaryds sparbank")
     );
 
-    test("Närs sparbank", () =>
-      expect(bankNameByString("8250-3")) |> toEqual("Närs sparbank")
+    test({j|Närs sparbank|j}, () =>
+      expect(bankNameByString("8250-3")) |> toEqual({j|Närs sparbank|j})
     );
 
     test("Sparbanken Skaraborg", () =>
@@ -268,18 +271,18 @@ describe("#bankName", () => {
       expect(bankNameByString("8295-8")) |> toEqual("Skurups sparbank")
     );
 
-    test("Häradssparbanken Mönsterås", () =>
+    test({j|Häradssparbanken Mönsterås|j}, () =>
       expect(bankNameByString("8331-1"))
-      |> toEqual("Häradssparbanken Mönsterås")
+      |> toEqual({j|Häradssparbanken Mönsterås|j})
     );
 
     test("Fryksdalens sparbank", () =>
       expect(bankNameByString("8336-0")) |> toEqual("Fryksdalens sparbank")
     );
 
-    test("Sölvesborg-Mjällby sparbank", () =>
+    test({j|Sölvesborg-Mjällby sparbank|j}, () =>
       expect(bankNameByString("8321-2"))
-      |> toEqual("Sölvesborg-Mjällby sparbank")
+      |> toEqual({j|Sölvesborg-Mjällby sparbank|j})
     );
 
     test("Varbergs sparbank", () =>
@@ -309,76 +312,13 @@ describe("#bankName", () => {
     )
   );
 
-  describe("Ålandsbanken", () =>
-    testAll("2300-2399", [2300, 2354, 2399], intTest("Ålandsbanken"))
+  describe({j|Ålandsbanken|j}, () =>
+    testAll("2300-2399", [2300, 2354, 2399], intTest({j|Ålandsbanken|j}))
   );
 });
 
 describe("#allBanks", () =>
-  Expect.(
-    test("list all banks", () =>
-      expect(allBanks)
-      |> toEqual([|
-           "Amfa Bank",
-           "Avanza Bank",
-           "Bankernas Automatbolag",
-           "Bank of China (Luxembourg)",
-           "Bluestep Finans",
-           "Calyon Bank",
-           "Citibank",
-           "Danske Bank",
-           "DNB Bank",
-           "Ekobanken",
-           "Erik Penser Bankaktiebolag",
-           "Exchange Finans Europe",
-           "Folkia",
-           "Forex Bank",
-           "Fortis Bank",
-           "GE Money Bank",
-           "Handelsbanken",
-           "ICA Banken",
-           "IKANO Bank",
-           "JAK Medlemsbank",
-           "Kommuninvest",
-           "Kortaccept Nordic",
-           "Landshypotek",
-           "Lån & Spar Bank",
-           "Länsförsäkringar Bank",
-           "Marginalen Bank",
-           "MedMera Bank",
-           "Nasdaq-OMX",
-           "Netfonds Bank (ub)",
-           "Nordax Finans",
-           "Nordea",
-           "Nordnet Bank",
-           "Pareto Öhman",
-           "Privatgirot",
-           "RBS",
-           "Resurs Bank",
-           "Sveriges Riksbank",
-           "Riksgälden",
-           "SBAB Bank",
-           "SEB",
-           "Skandiabanken",
-           "Sparbanken Syd",
-           "Swedbank",
-           "Fryksdalens sparbank",
-           "Sparbanken Gotland",
-           "Kinda-Ydre sparbank",
-           "Lekebergs sparbank",
-           "Markaryds sparbank",
-           "Häradssparbanken Mönsterås",
-           "Närs sparbank",
-           "Sparbanken Skaraborg",
-           "Skurups sparbank",
-           "Sölvesborg-Mjällby sparbank",
-           "Varbergs sparbank",
-           "Teller Branch Norway",
-           "Teller Branch Sweden",
-           "Volvofinans Bank",
-           "VP Securities A/S",
-           "Ålandsbanken",
-         |])
-    )
+  test("list all banks", () =>
+    expect(allBanks) |> toMatchSnapshot
   )
 );

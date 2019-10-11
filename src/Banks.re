@@ -62,7 +62,7 @@ type banks =
 
 let getBankName = bank =>
   switch (bank) {
-  | Alandsbanken => "Ålandsbanken"
+  | Alandsbanken => {j|Ålandsbanken|j}
   | Amfa => "Amfa Bank"
   | Avanza => "Avanza Bank"
   | BankernasAutomatbolag => "Bankernas Automatbolag"
@@ -86,8 +86,8 @@ let getBankName = bank =>
   | Kommuninvest => "Kommuninvest"
   | Kortaccept => "Kortaccept Nordic"
   | Landshypotek => "Landshypotek"
-  | LSB => "Lån & Spar Bank"
-  | Lansforsakringar => "Länsförsäkringar Bank"
+  | LSB => {j|Lån & Spar Bank|j}
+  | Lansforsakringar => {j|Länsförsäkringar Bank|j}
   | Marginalen => "Marginalen Bank"
   | MedMera => "MedMera Bank"
   | Nasdaq => "Nasdaq-OMX"
@@ -95,12 +95,12 @@ let getBankName = bank =>
   | Nordax => "Nordax Finans"
   | Nordea => "Nordea"
   | Nordnet => "Nordnet Bank"
-  | Pareto => "Pareto Öhman"
+  | Pareto => {j|Pareto Öhman|j}
   | Privatgirot => "Privatgirot"
   | RBS => "RBS"
   | Resurs => "Resurs Bank"
   | Riksbanken => "Sveriges Riksbank"
-  | Riksgalden => "Riksgälden"
+  | Riksgalden => {j|Riksgälden|j}
   | SBAB => "SBAB Bank"
   | SEB => "SEB"
   | Skandia => "Skandiabanken"
@@ -111,11 +111,11 @@ let getBankName = bank =>
   | SWEDKindra => "Kinda-Ydre sparbank"
   | SWEDLekeberg => "Lekebergs sparbank"
   | SWEDMarkaryd => "Markaryds sparbank"
-  | SWEDMonsteras => "Häradssparbanken Mönsterås"
-  | SWEDNars => "Närs sparbank"
+  | SWEDMonsteras => {j|Häradssparbanken Mönsterås|j}
+  | SWEDNars => {j|Närs sparbank|j}
   | SWEDSkaraborg => "Sparbanken Skaraborg"
   | SWEDSkurup => "Skurups sparbank"
-  | SWEDSolvesborg => "Sölvesborg-Mjällby sparbank"
+  | SWEDSolvesborg => {j|Sölvesborg-Mjällby sparbank|j}
   | SWEDVarberg => "Varbergs sparbank"
   | TellerNorway => "Teller Branch Norway"
   | TellerSweden => "Teller Branch Sweden"
