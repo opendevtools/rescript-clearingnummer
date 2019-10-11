@@ -12,28 +12,37 @@ npm install bs-clearingnummer
 
 Add `bs-clearingnummer` to `bs-dependencies` in `bsconfig.json`
 
-## Functions
+## Modules
 
-### bankNameByInteger
+### BankName
+
+#### fromInt
+
+Takes a clearing number as `int`. This is the most common format.
 
 ```ocaml
-let bankName = Clearingnummer.bankNameByInteger(5202)
+(* int => string *)
+let bankName = Clearingnummer.BankName.fromInt(5202)
 (* bankName = "SEB" *)
 ```
 
-### bankNameByString
+#### fromString
 
 Used by Swedbank and their old bank names (sparbanker)
 
 ```ocaml
-let bankName = Clearingnummer.bankNameByString("8060-6")
+(* string => string *)
+let bankName = Clearingnummer.BankName.fromString("8060-6")
 (* bankName = "Swedbank" *)
 ```
 
-### allBanks
+### Banks
+
+#### all
 
 ```ocaml
-let banks = Clearingnummer.allBanks
+(* array(string) *)
+let banks = Clearingnummer.Banks.all
 (* banks = ["Amfa Bank", "Avanza Bank", ...] *)
 ```
 

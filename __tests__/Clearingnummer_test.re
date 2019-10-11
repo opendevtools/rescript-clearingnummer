@@ -3,7 +3,7 @@ open Expect;
 open Clearingnummer;
 
 let intTest = (bankName, bank) =>
-  expect(bankNameByInteger(bank)) |> toEqual(bankName);
+  expect(BankName.fromInt(bank)) |> toEqual(bankName);
 
 describe("#bankName", () => {
   describe("Amfa Bank", () =>
@@ -240,53 +240,56 @@ describe("#bankName", () => {
         "8424-4",
       ],
       bank =>
-      expect(bankNameByString(bank)) |> toEqual("Swedbank")
+      expect(BankName.fromString(bank)) |> toEqual("Swedbank")
     );
 
     test("Sparbanken Gotland", () =>
-      expect(bankNameByString("8055-6")) |> toEqual("Sparbanken Gotland")
+      expect(BankName.fromString("8055-6")) |> toEqual("Sparbanken Gotland")
     );
 
     test("Kinda-Ydre sparbank", () =>
-      expect(bankNameByString("8158-8")) |> toEqual("Kinda-Ydre sparbank")
+      expect(BankName.fromString("8158-8"))
+      |> toEqual("Kinda-Ydre sparbank")
     );
 
     test("Lekebergs sparbank", () =>
-      expect(bankNameByString("8164-6")) |> toEqual("Lekebergs sparbank")
+      expect(BankName.fromString("8164-6")) |> toEqual("Lekebergs sparbank")
     );
 
     test("Markaryds sparbank", () =>
-      expect(bankNameByString("8217-2")) |> toEqual("Markaryds sparbank")
+      expect(BankName.fromString("8217-2")) |> toEqual("Markaryds sparbank")
     );
 
     test({j|Närs sparbank|j}, () =>
-      expect(bankNameByString("8250-3")) |> toEqual({j|Närs sparbank|j})
+      expect(BankName.fromString("8250-3")) |> toEqual({j|Närs sparbank|j})
     );
 
     test("Sparbanken Skaraborg", () =>
-      expect(bankNameByString("8289-1")) |> toEqual("Sparbanken Skaraborg")
+      expect(BankName.fromString("8289-1"))
+      |> toEqual("Sparbanken Skaraborg")
     );
 
     test("Skurups sparbank", () =>
-      expect(bankNameByString("8295-8")) |> toEqual("Skurups sparbank")
+      expect(BankName.fromString("8295-8")) |> toEqual("Skurups sparbank")
     );
 
     test({j|Häradssparbanken Mönsterås|j}, () =>
-      expect(bankNameByString("8331-1"))
+      expect(BankName.fromString("8331-1"))
       |> toEqual({j|Häradssparbanken Mönsterås|j})
     );
 
     test("Fryksdalens sparbank", () =>
-      expect(bankNameByString("8336-0")) |> toEqual("Fryksdalens sparbank")
+      expect(BankName.fromString("8336-0"))
+      |> toEqual("Fryksdalens sparbank")
     );
 
     test({j|Sölvesborg-Mjällby sparbank|j}, () =>
-      expect(bankNameByString("8321-2"))
+      expect(BankName.fromString("8321-2"))
       |> toEqual({j|Sölvesborg-Mjällby sparbank|j})
     );
 
     test("Varbergs sparbank", () =>
-      expect(bankNameByString("8388-1")) |> toEqual("Varbergs sparbank")
+      expect(BankName.fromString("8388-1")) |> toEqual("Varbergs sparbank")
     );
   });
 
@@ -316,9 +319,3 @@ describe("#bankName", () => {
     testAll("2300-2399", [2300, 2354, 2399], intTest({j|Ålandsbanken|j}))
   );
 });
-
-describe("#allBanks", () =>
-  test("list all banks", () =>
-    expect(allBanks) |> toMatchSnapshot
-  )
-);

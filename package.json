@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "@glennsl/bs-jest": "0.4.9",
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/git": "7.0.16",
     "bs-platform": "5.0.6",
     "is-ci-cli": "2.0.0"
   }
