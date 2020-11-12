@@ -58,11 +58,11 @@ type banks =
   | TellerSweden
   | Volvo
   | VP
-  | Unknown;
+  | Unknown
 
-let getBankName =
-  fun
-  | Alandsbanken => {j|Ålandsbanken|j}
+let getBankName = bank =>
+  switch bank {
+  | Alandsbanken => `Ålandsbanken`
   | Amfa => "Amfa Bank"
   | Avanza => "Avanza Bank"
   | BankernasAutomatbolag => "Bankernas Automatbolag"
@@ -86,8 +86,8 @@ let getBankName =
   | Kommuninvest => "Kommuninvest"
   | Kortaccept => "Kortaccept Nordic"
   | Landshypotek => "Landshypotek"
-  | LSB => {j|Lån & Spar Bank|j}
-  | Lansforsakringar => {j|Länsförsäkringar Bank|j}
+  | LSB => `Lån & Spar Bank`
+  | Lansforsakringar => `Länsförsäkringar Bank`
   | Marginalen => "Marginalen Bank"
   | MedMera => "MedMera Bank"
   | Nasdaq => "Nasdaq-OMX"
@@ -95,12 +95,12 @@ let getBankName =
   | Nordax => "Nordax Finans"
   | Nordea => "Nordea"
   | Nordnet => "Nordnet Bank"
-  | Pareto => {j|Pareto Öhman|j}
+  | Pareto => `Pareto Öhman`
   | Privatgirot => "Privatgirot"
   | RBS => "RBS"
   | Resurs => "Resurs Bank"
   | Riksbanken => "Sveriges Riksbank"
-  | Riksgalden => {j|Riksgälden|j}
+  | Riksgalden => `Riksgälden`
   | SBAB => "SBAB Bank"
   | SEB => "SEB"
   | Skandia => "Skandiabanken"
@@ -111,20 +111,21 @@ let getBankName =
   | SWEDKindra => "Kinda-Ydre sparbank"
   | SWEDLekeberg => "Lekebergs sparbank"
   | SWEDMarkaryd => "Markaryds sparbank"
-  | SWEDMonsteras => {j|Häradssparbanken Mönsterås|j}
-  | SWEDNars => {j|Närs sparbank|j}
+  | SWEDMonsteras => `Häradssparbanken Mönsterås`
+  | SWEDNars => `Närs sparbank`
   | SWEDSkaraborg => "Sparbanken Skaraborg"
   | SWEDSkurup => "Skurups sparbank"
-  | SWEDSolvesborg => {j|Sölvesborg-Mjällby sparbank|j}
+  | SWEDSolvesborg => `Sölvesborg-Mjällby sparbank`
   | SWEDVarberg => "Varbergs sparbank"
   | TellerNorway => "Teller Branch Norway"
   | TellerSweden => "Teller Branch Sweden"
   | Volvo => "Volvofinans Bank"
   | VP => "VP Securities A/S"
-  | Unknown => "";
+  | Unknown => ""
+  }
 
 let all =
-  [|
+  [
     Amfa,
     Avanza,
     BankernasAutomatbolag,
@@ -184,5 +185,4 @@ let all =
     Volvo,
     VP,
     Alandsbanken,
-  |]
-  ->Belt.Array.map(item => getBankName(item));
+  ]->Js.Array2.map(item => getBankName(item))
