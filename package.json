@@ -1,9 +1,12 @@
 {
-  "name": "bs-clearingnummer",
+  "name": "@opendevtools/rescript-clearingnummer",
   "version": "1.0.0",
   "description": "Clearing numbers for Swedish banks",
-  "author": "Rickard Laurin <rickard.laurin@gmail.com> (http://rickardlaurin.se/)",
+  "author": "Rickard Natt och Dag <nattochdag@hey.com> (http://willcodefor.beer/)",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
