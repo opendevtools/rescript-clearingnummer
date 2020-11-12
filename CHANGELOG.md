@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/believer/bs-clearingnummer/compare/v1.0.0...v1.1.0) (2020-11-12)
+
+
+### Features
+
+* release under [@opendevtools](https://github.com/opendevtools) organization ([2addefd](https://github.com/believer/bs-clearingnummer/commit/2addefdb88d5b7ca4fc27a0d0a3965dfc40a5705))
+
 # [1.0.0](https://github.com/believer/bs-clearingnummer/compare/v0.1.1...v1.0.0) (2019-10-11)
 
 
