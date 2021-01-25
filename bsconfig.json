@@ -1,5 +1,5 @@
 {
-  "name": "rescript-clearingnummer",
+  "name": "@opendevtools/rescript-clearingnummer",
   "version": "0.1.0",
   "sources": [
     "src",
