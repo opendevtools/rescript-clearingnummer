@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/believer/bs-clearingnummer/compare/v1.1.0...v1.1.1) (2021-01-25)
+
+
+### Bug Fixes
+
+* update bsconfig naming ([cb462ae](https://github.com/believer/bs-clearingnummer/commit/cb462aefe101b036433801c6b5cd4a9bbedd5aa1))
+
 # [1.1.0](https://github.com/believer/bs-clearingnummer/compare/v1.0.0...v1.1.0) (2020-11-12)
 
 
