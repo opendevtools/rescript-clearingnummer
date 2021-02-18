@@ -2,7 +2,7 @@
   "name": "@opendevtools/rescript-clearingnummer",
   "version": "1.1.1",
   "description": "Clearing numbers for Swedish banks",
-  "author": "Rickard Natt och Dag <nattochdag@hey.com> (http://willcodefor.beer/)",
+  "author": "Rickard Natt och Dag <rickard@hey.com> (http://willcodefor.beer/)",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -16,14 +16,15 @@
     "test:watch": "jest --watch"
   },
   "keywords": [
-    "Clearing",
-    "Number",
-    "Swedish",
-    "Banks",
-    "Bank",
-    "Clearingnummer",
-    "Svensk bank",
-    "BuckleScript"
+    "bucklescript",
+    "rescript",
+    "clearing",
+    "number",
+    "swedish",
+    "banks",
+    "bank",
+    "clearingnummer",
+    "svensk bank"
   ],
   "homepage": "https://github.com/believer/bs-clearingnummer#readme",
   "repository": {
