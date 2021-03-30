@@ -26,13 +26,13 @@
     "clearingnummer",
     "svensk bank"
   ],
-  "homepage": "https://github.com/believer/bs-clearingnummer#readme",
+  "homepage": "https://github.com/opendevtools/rescript-clearingnummer#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/believer/bs-clearingnummer.git"
+    "url": "https://github.com/opendevtools/rescript-clearingnummer.git"
   },
   "bugs": {
-    "url": "https://github.com/believer/bs-clearingnummer/issues"
+    "url": "https://github.com/opendevtools/rescript-clearingnummer/issues"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "0.7.0",
