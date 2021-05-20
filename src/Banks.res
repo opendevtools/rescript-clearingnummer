@@ -42,7 +42,7 @@ type banks =
   | SEB
   | Skandia
   | Sparbanken
-  | SWED
+  | Swedbank
   | SWEDFryksdalen
   | SWEDGotland
   | SWEDKindra
@@ -105,7 +105,7 @@ let getBankName = bank =>
   | SEB => "SEB"
   | Skandia => "Skandiabanken"
   | Sparbanken => "Sparbanken Syd"
-  | SWED => "Swedbank"
+  | Swedbank => "Swedbank"
   | SWEDGotland => "Sparbanken Gotland"
   | SWEDFryksdalen => "Fryksdalens sparbank"
   | SWEDKindra => "Kinda-Ydre sparbank"
@@ -168,7 +168,7 @@ let all =
     SEB,
     Skandia,
     Sparbanken,
-    SWED,
+    Swedbank,
     SWEDFryksdalen,
     SWEDGotland,
     SWEDKindra,
